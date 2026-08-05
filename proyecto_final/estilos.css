@@ -1,0 +1,591 @@
+/* inicio */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Public Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: hsl(233, 8%, 62%);
+    background-color: hsl(0, 0%, 98%);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.contenedor {
+    width: min(1110px, 88%);
+    margin: 0 auto;
+}
+
+
+/* BOTÓN */
+
+.boton-invitacion {
+    display: inline-block;
+    padding: 14px 34px;
+    border-radius: 30px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    background: linear-gradient(
+        to right,
+        hsl(136, 64%, 51%),
+        hsl(192, 69%, 51%)
+    );
+    transition: opacity 0.3s;
+}
+
+.boton-invitacion:hover {
+    opacity: 0.7;
+}
+
+
+/* ENCABEZADO */
+
+.encabezado {
+    position: relative;
+    z-index: 20;
+    background-color: white;
+}
+
+.barra-navegacion {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 140px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu a {
+    position: relative;
+    color: hsl(233, 8%, 62%);
+    font-size: 14px;
+    padding: 31px 0;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(
+        to right,
+        hsl(136, 64%, 51%),
+        hsl(192, 69%, 51%)
+    );
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.menu a:hover {
+    color: hsl(233, 26%, 24%);
+}
+
+.menu a:hover::after {
+    transform: scaleX(1);
+}
+
+.boton-menu {
+    display: none;
+}
+
+
+/* PORTADA */
+
+.portada {
+    position: relative;
+    min-height: 655px;
+    overflow: hidden;
+    background-color: hsl(0, 0%, 98%);
+}
+
+.portada-contenido {
+    min-height: 655px;
+    display: flex;
+    align-items: center;
+}
+
+.portada-texto {
+    width: 45%;
+    position: relative;
+    z-index: 2;
+}
+
+.portada h1 {
+    max-width: 460px;
+    color: hsl(233, 26%, 24%);
+    font-size: 55px;
+    line-height: 1.15;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+.portada p {
+    max-width: 450px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+.portada-imagen {
+    position: absolute;
+    top: -260px;
+    right: -135px;
+    width: 63%;
+    height: 850px;
+    background-image: url("images/bg-intro-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 125%;
+}
+
+.portada-imagen img {
+    position: absolute;
+    width: 750px;
+    top: 80px;
+    right: -40px;
+}
+
+
+/* BENEFICIOS */
+
+.beneficios {
+    padding: 100px 0;
+    background-color: hsl(220, 16%, 96%);
+}
+
+.beneficios-titulo {
+    max-width: 650px;
+    margin-bottom: 70px;
+}
+
+.beneficios h2,
+.articulos h2 {
+    color: hsl(233, 26%, 24%);
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+.beneficios-titulo p {
+    line-height: 1.6;
+}
+
+.lista-beneficios {
+    display: flex;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+.beneficio {
+    width: 25%;
+}
+
+.beneficio img {
+    width: 72px;
+    margin-bottom: 38px;
+}
+
+.beneficio h3 {
+    color: hsl(233, 26%, 24%);
+    font-size: 23px;
+    font-weight: 400;
+    margin-bottom: 22px;
+}
+
+.beneficio p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* ARTÍCULOS */
+
+.articulos {
+    padding: 95px 0;
+    background-color: hsl(0, 0%, 98%);
+}
+
+.articulos h2 {
+    margin-bottom: 50px;
+}
+
+.lista-articulos {
+    display: flex;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+.tarjeta-articulo {
+    width: 25%;
+    overflow: hidden;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.tarjeta-articulo > img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.articulo-contenido {
+    padding: 25px;
+}
+
+.articulo-contenido small {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 10px;
+}
+
+.articulo-contenido h3 {
+    margin-bottom: 12px;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.articulo-contenido h3 a {
+    color: hsl(233, 26%, 24%);
+    transition: color 0.3s;
+}
+
+.articulo-contenido h3 a:hover {
+    color: hsl(136, 64%, 51%);
+}
+
+.articulo-contenido p {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+
+/* PIE DE PÁGINA */
+
+.pie-pagina {
+    padding: 50px 0;
+    background-color: hsl(233, 26%, 24%);
+}
+
+.pie-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pie-identidad {
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo-pie {
+    width: 140px;
+}
+
+.redes-sociales {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.redes-sociales img {
+    width: 20px;
+    transition: opacity 0.3s;
+}
+
+.redes-sociales a:hover img {
+    opacity: 0.6;
+}
+
+.pie-enlaces {
+    display: flex;
+    gap: 90px;
+}
+
+.pie-enlaces div {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.pie-enlaces a {
+    color: white;
+    font-size: 14px;
+}
+
+.pie-enlaces a:hover {
+    color: hsl(136, 64%, 51%);
+}
+
+.pie-accion {
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.pie-accion p {
+    font-size: 14px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    .contenedor {
+        width: 88%;
+    }
+
+    .barra-navegacion {
+        min-height: 65px;
+    }
+
+    .logo img {
+        width: 140px;
+    }
+
+    .boton-menu {
+        display: block;
+        width: 24px;
+    }
+
+    .boton-escritorio {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 85px;
+        left: 6%;
+        width: 88%;
+        padding: 25px;
+        flex-direction: column;
+        gap: 0;
+        border-radius: 5px;
+        background-color: white;
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.22);
+    }
+
+    .menu.menu-activo {
+        display: flex;
+    }
+
+    .menu a {
+        color: hsl(233, 26%, 24%);
+        font-size: 17px;
+        padding: 12px 0;
+    }
+
+    .menu a::after {
+        display: none;
+    }
+
+
+    /* PORTADA MÓVIL */
+
+    .portada {
+        min-height: auto;
+    }
+
+    .portada-imagen {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        height: 330px;
+        background-image: url("images/bg-intro-mobile.svg");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .portada-imagen img {
+        width: 380px;
+        max-width: 95%;
+        top: -120px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .portada-contenido {
+        min-height: auto;
+        padding: 35px 0 85px;
+        text-align: center;
+    }
+
+    .portada-texto {
+        width: 100%;
+    }
+
+    .portada h1 {
+        max-width: 350px;
+        margin: 0 auto 20px;
+        font-size: 39px;
+    }
+
+    .portada p {
+        max-width: 390px;
+        margin: 0 auto 30px;
+        line-height: 1.6;
+    }
+
+
+    /* BENEFICIOS MÓVIL */
+
+    .beneficios {
+        padding: 70px 0;
+        text-align: center;
+    }
+
+    .beneficios-titulo {
+        margin: 0 auto 60px;
+    }
+
+    .beneficios h2,
+    .articulos h2 {
+        font-size: 32px;
+    }
+
+    .lista-beneficios {
+        flex-direction: column;
+        gap: 45px;
+    }
+
+    .beneficio {
+        width: 100%;
+    }
+
+    .beneficio img {
+        margin: 0 auto 25px;
+    }
+
+    .beneficio h3 {
+        margin-bottom: 18px;
+    }
+
+    .beneficio p {
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+
+    /* ARTÍCULOS MÓVIL */
+
+    .articulos {
+        padding: 80px 0;
+    }
+
+    .articulos h2 {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .lista-articulos {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .tarjeta-articulo {
+        width: 100%;
+    }
+
+    .tarjeta-articulo > img {
+        height: 200px;
+    }
+
+    .articulo-contenido {
+        padding: 25px 30px 35px;
+    }
+
+
+    /* PIE MÓVIL */
+
+    .pie-pagina {
+        padding: 45px 0;
+    }
+
+    .pie-contenido {
+        flex-direction: column;
+        text-align: center;
+        gap: 32px;
+    }
+
+    .pie-identidad {
+        min-height: auto;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .pie-enlaces {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .pie-enlaces div {
+        gap: 18px;
+    }
+
+    .pie-accion {
+        min-height: auto;
+        align-items: center;
+        gap: 28px;
+    }
+
+}
+
+
+@media (max-width: 380px) {
+
+    .portada-imagen {
+        height: 285px;
+    }
+
+    .portada-imagen img {
+        width: 330px;
+        top: -105px;
+    }
+
+    .portada h1 {
+        font-size: 36px;
+    }
+
+}

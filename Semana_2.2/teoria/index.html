@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teoria CSS</title>
+
+    <style>
+        /* Pseudo clases */
+
+        button {
+            background-color: red;
+        }
+
+        button:hover{
+            background-color: blue;
+            font-size: 18px;
+        }
+        
+        p{
+            color: blue;
+        }
+
+        p::before{
+            content: '❤️x';
+            color: green
+        }
+
+        p::after{
+            content: '😊';
+            font-size: 28px;
+        }
+
+
+
+
+        article{
+            background-color: aquamarine;
+        }
+         article h2{
+            color: orange;
+        }
+        article strong{
+            color: chocolate;
+        }
+
+
+
+
+
+        h1, h2, em{
+            border: 5px solid salmon;
+        }
+
+        body{
+            color: orange;
+        }
+        button{
+            color: inherit;
+        }
+        a{
+            color: inherit;
+        }
+
+
+
+
+        header{
+            color: violet;
+        }
+        #cabecera{
+            color: blue;
+        }
+        .texto{
+            color:red;
+        }
+
+
+
+
+        h2{
+            color: fuchsia;
+            color: #ff00ff;
+            color: hsl(99, 92%, 37%);
+            color: hsl(99, 92%, 37%, 0.54);
+            color: rgb(0, 0, 0);
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <button>Click aquí!</button>
+
+    <p>Texto especial</p>
+
+    <article>
+        <h2>Bienvenido</h2>
+
+        <strong>Hola a todos</strong>
+    </article>
+
+    <section>
+        <h1>Título</h1>
+
+        <h2>Subtitulo</h2>
+
+        <strong>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Nemo animi dolorum eum explicabo ea repellendus quasi error
+            esse quibusdam nulla! Labore accusamus voluptatem consequuntur
+            tempora ea architecto quam numquam assumenda.
+        </strong>
+
+        <em>Texto con énfasis</em>
+
+        <a href="#">Soy un link</a>
+    </section>
+
+    <header id="cabecera" class="texto">
+        ¿De qué color soy?
+    </header>
+
+</body>
+</html>
